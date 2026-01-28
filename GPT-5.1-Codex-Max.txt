@@ -1,0 +1,75 @@
+GPT-5.1-Codex-Max  ：：
+User: prompt
+You are a senior front-end engineer.
+
+Your task is to design and implement a complete Personal Finance & Budget Planning web application from scratch.
+
+Application Description:
+The application helps users track income and expenses, set monthly budgets by category, and understand their spending situation.
+
+Core Functional Requirements:
+1. Users must be able to:
+   - Add income records
+   - Add expense records with category and date
+   - Define monthly budget limits per category
+2. The application must include:
+   - Overview page showing total income, total expense, and remaining balance
+   - Expense list page with filtering by category and month
+   - Budget management page showing budget vs actual spending
+3. Budget overrun should be visually highlighted in the UI.
+
+Non-functional Requirements:
+- No backend required (use in-memory state or mock data)
+- All data interactions should feel realistic and persistent during session
+- UI should resemble a real personal finance product
+
+Technology:
+- Any frontend framework or vanilla JS is allowed.
+
+Deliverables:
+- Full application layout and navigation
+- Page-level and component-level UI implementation
+- Data models for income, expense, and budget
+- Explanation of how budget usage is calculated and reflected in UI
+
+GitHub Copilot: Optimizing tool selection...
+
+Read [](file:///Users/danni_yin/Documents/Bugbash/26.1/1.28/case2/GPT-5.1-Codex-Max/final_prompt.txt)
+
+Read [](file:///Users/danni_yin/Documents/Bugbash/26.1/1.28/case2/GPT-5.1-Codex-Max/GPT-5.1-Codex-Max.txt)
+
+Created 5 todos
+
+Created [](file:///Users/danni_yin/Documents/Bugbash/26.1/1.28/case2/GPT-5.1-Codex-Max/index.html)
+
+Created [](file:///Users/danni_yin/Documents/Bugbash/26.1/1.28/case2/GPT-5.1-Codex-Max/style.css)
+
+Created [](file:///Users/danni_yin/Documents/Bugbash/26.1/1.28/case2/GPT-5.1-Codex-Max/app.js)
+
+Completed: *Set up project files and base HTML layout* (1/5)
+
+**What changed**
+- Created full single-page app shell with navigation, overview, expense management, and budget management pages in index.html.
+- Added dark, desktop-first styling with clear summaries, tables, and visual overrun indicators in style.css.
+- Implemented in-memory + localStorage state, data models, forms, filters, rendering, and budget overrun highlighting in app.js.
+
+**Budget calculation**
+- Monthly totals: sum `amount` for incomes and expenses whose date matches the selected `YYYY-MM`; balance = income − expense.
+- Budget usage per category/month: sum expenses for that category in the selected month; compare to `monthlyLimit`.
+- Overrun logic: if `spent > monthlyLimit`, label “Over” and show red progress fill; otherwise “On track.” Progress bar caps at 150% to show overages.
+
+**How to use**
+- Open index.html in a browser. Default data loads; state persists in localStorage for the session.
+- Set month filters on Overview, Expenses, and Budgets independently to focus calculations.
+- Add incomes/expenses via the forms; add or update per-category monthly budgets on the Budget page to see live usage bars.
+- Switch pages via the header nav buttons.
+
+**Testing**
+- Not run automated tests; manual browser check recommended.
+
+**Next steps (optional)**
+1. Add edit/delete for income/expense rows.
+2. Export/import data (JSON) to move between sessions.
+3. Add charts (e.g., category breakdown pie) for the selected month.
+
+Made changes.

@@ -1,0 +1,32 @@
+prompt
+You are a senior front-end engineer.
+
+Your task is to design and implement a complete Personal Finance & Budget Planning web application from scratch.
+
+Application Description:
+The application helps users track income and expenses, set monthly budgets by category, and understand their spending situation.
+
+Core Functional Requirements:
+1. Users must be able to:
+   - Add income records
+   - Add expense records with category and date
+   - Define monthly budget limits per category
+2. The application must include:
+   - Overview page showing total income, total expense, and remaining balance
+   - Expense list page with filtering by category and month
+   - Budget management page showing budget vs actual spending
+3. Budget overrun should be visually highlighted in the UI.
+
+Non-functional Requirements:
+- No backend required (use in-memory state or mock data)
+- All data interactions should feel realistic and persistent during session
+- UI should resemble a real personal finance product
+
+Technology:
+- Any frontend framework or vanilla JS is allowed.
+
+Deliverables:
+- Full application layout and navigation
+- Page-level and component-level UI implementation
+- Data models for income, expense, and budget
+- Explanation of how budget usage is calculated and reflected in UI
