@@ -1,0 +1,324 @@
+.budget-management-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.budget-header {
+  margin-bottom: 30px;
+}
+
+.budget-header h1 {
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.overall-budget-summary {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.overall-budget-summary h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.overall-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.overall-stat-card {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+.overall-stat-card.over-budget {
+  border-left-color: #ef4444;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.stat-value.spent {
+  color: #ef4444;
+}
+
+.overall-progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.overall-progress-fill {
+  height: 100%;
+  background: #10b981;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.overall-progress-fill.warning {
+  background: #f59e0b;
+}
+
+.overall-progress-fill.over-budget {
+  background: #ef4444;
+}
+
+.budget-list-section {
+  margin-bottom: 30px;
+}
+
+.budget-list-section h2 {
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.budget-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.budget-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.budget-card.over-budget-card {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.budget-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.budget-card-header h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 18px;
+}
+
+.btn-edit {
+  padding: 6px 16px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-edit:hover {
+  background: #2563eb;
+}
+
+.edit-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit-input {
+  width: 100px;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-save, .btn-cancel {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-save {
+  background: #10b981;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #059669;
+}
+
+.btn-cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-cancel:hover {
+  background: #d1d5db;
+}
+
+.budget-details {
+  margin-bottom: 20px;
+}
+
+.budget-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.budget-row:last-child {
+  border-bottom: none;
+}
+
+.budget-label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.budget-value {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.spent-value {
+  color: #ef4444;
+}
+
+.budget-value.negative {
+  color: #ef4444;
+}
+
+.budget-value.positive {
+  color: #10b981;
+}
+
+.progress-section {
+  margin-top: 15px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.progress-percentage {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.progress-percentage.over-budget-text {
+  color: #ef4444;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #10b981;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.progress-fill.warning {
+  background: #f59e0b;
+}
+
+.progress-fill.over-budget {
+  background: #ef4444;
+}
+
+.over-budget-warning {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  color: #991b1b;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.budget-explanation {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 4px solid #3b82f6;
+}
+
+.budget-explanation h3 {
+  margin-top: 0;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.budget-explanation ul {
+  color: #374151;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.budget-explanation li {
+  margin-bottom: 10px;
+}
+
+.budget-explanation strong {
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .budget-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .overall-stats {
+    grid-template-columns: 1fr;
+  }
+}
