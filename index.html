@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Finance & Budget Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark">PF</div>
+      <div>
+        <h1>Personal Finance & Budget Planner</h1>
+        <p class="subtitle">Track income, expenses, and budgets in one place</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <button class="nav-btn" data-target="overview">Overview</button>
+      <button class="nav-btn" data-target="expenses">Expense Management</button>
+      <button class="nav-btn" data-target="budgets">Budget Management</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="overview" class="page">
+      <div class="section-heading">
+        <div>
+          <h2>Overview</h2>
+          <p class="help-text">Select a month to see totals and balance</p>
+        </div>
+        <label class="inline-field">Month
+          <input type="month" id="overview-month" />
+        </label>
+      </div>
+      <div class="grid summaries">
+        <div class="card">
+          <p class="label">Total Income</p>
+          <p class="value" id="total-income">$0</p>
+        </div>
+        <div class="card">
+          <p class="label">Total Expense</p>
+          <p class="value" id="total-expense">$0</p>
+        </div>
+        <div class="card">
+          <p class="label">Remaining Balance</p>
+          <p class="value" id="balance">$0</p>
+        </div>
+      </div>
+
+      <div class="grid two-col">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Add Income</h3>
+            <p class="help-text">Track new money coming in</p>
+          </div>
+          <form id="income-form" class="stack-form">
+            <label>Source
+              <input name="source" required placeholder="Paycheck, bonus, etc." />
+            </label>
+            <label>Amount
+              <input name="amount" type="number" step="0.01" min="0" required />
+            </label>
+            <label>Date
+              <input name="date" type="date" required />
+            </label>
+            <button type="submit" class="primary">Add Income</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Add Expense</h3>
+            <p class="help-text">Capture spending with category and notes</p>
+          </div>
+          <form id="expense-form" class="stack-form">
+            <label>Category
+              <select name="category" id="expense-category" required></select>
+            </label>
+            <label>Amount
+              <input name="amount" type="number" step="0.01" min="0" required />
+            </label>
+            <label>Date
+              <input name="date" type="date" required />
+            </label>
+            <label>Note
+              <input name="note" placeholder="Optional note" />
+            </label>
+            <button type="submit" class="primary">Add Expense</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="expenses" class="page hidden">
+      <div class="section-heading">
+        <div>
+          <h2>Expense Management</h2>
+          <p class="help-text">Filter by month and category to investigate spending</p>
+        </div>
+        <div class="filters">
+          <label>Month
+            <input type="month" id="expense-month-filter" />
+          </label>
+          <label>Category
+            <select id="expense-category-filter"></select>
+          </label>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <h3>Expenses</h3>
+          <p class="help-text" id="expense-summary">0 expenses</p>
+        </div>
+        <div class="table">
+          <div class="table-head">
+            <div>Date</div>
+            <div>Category</div>
+            <div class="align-right">Amount</div>
+            <div>Note</div>
+          </div>
+          <div id="expense-rows" class="table-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="budgets" class="page hidden">
+      <div class="section-heading">
+        <div>
+          <h2>Budget Management</h2>
+          <p class="help-text">Set monthly limits and track usage by category</p>
+        </div>
+        <label class="inline-field">Month
+          <input type="month" id="budget-month" />
+        </label>
+      </div>
+
+      <div class="grid two-col">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Set or Update Budget</h3>
+            <p class="help-text">Budget is per category per month</p>
+          </div>
+          <form id="budget-form" class="stack-form">
+            <label>Category
+              <select name="category" id="budget-category" required></select>
+            </label>
+            <label>Monthly Limit
+              <input name="limit" type="number" step="0.01" min="0" required />
+            </label>
+            <button type="submit" class="primary">Save Budget</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Budget vs Actual</h3>
+            <p class="help-text">See where you are over or under</p>
+          </div>
+          <div id="budget-list" class="stack"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Session data is stored locally in your browser. Refresh-safe during this session.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
