@@ -1,0 +1,20 @@
+Application Name: Personal Finance & Budget Planner
+
+Core Entities:
+- Income (id, amount, source, date)
+- Expense (id, amount, category, date, note)
+- Budget (category, monthlyLimit)
+
+Required Pages:
+- Overview
+- Expense Management
+- Budget Management
+
+UI Expectations:
+- Clear numeric summaries
+- Category-based grouping
+- Visual indication when spending exceeds budget
+
+Constraints:
+- Desktop-first web application
+- Focus on clarity and correctness, not fancy visuals
